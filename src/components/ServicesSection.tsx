@@ -1,4 +1,3 @@
-
 import { CheckCircle, FileText, Calculator, Users, TrendingUp, Award, HeadphonesIcon } from 'lucide-react';
 
 const ServicesSection = () => {
@@ -9,7 +8,6 @@ const ServicesSection = () => {
       features: [
         "Bookkeeping cleanup per month",
         "Multi-year catch-up available", 
-        "Tax preparation support",
         "QuickBooks setup and training",
         "Ongoing monthly service available"
       ],
