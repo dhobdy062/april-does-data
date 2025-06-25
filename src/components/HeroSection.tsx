@@ -25,7 +25,7 @@ const HeroSection = () => {
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
               April Does Data is a Certified QuickBooks ProAdvisor who works with clients remotely across the country. 
               Whether your books are a mess, your payroll is behind, or you're prepping for a surprise audit, we step in and clean it up.{' '}
-              <span className="font-semibold text-gray-900">Fast. Accurate. Done Right.</span>
+              <span className="font-semibold text-gray-900">Fast. Accurate. Done Right. Even when no one's looking.</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
