@@ -95,32 +95,7 @@ export default function AuthoritySection() {
         </div>
 
         {/* Services List */}
-        <div className="mt-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="gradient-text">Services</span>
-            </h3>
-            <p className="text-xl text-gray-600">
-              Comprehensive bookkeeping solutions tailored to your business needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => <Card key={index} className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover-lift">
-                <CardContent className="p-8">
-                  <h4 className="text-xl font-bold text-gray-900 mb-6 text-center">
-                    {service.category}
-                  </h4>
-                  <ul className="space-y-3">
-                    {service.items.map((item, itemIndex) => <li key={itemIndex} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600">{item}</span>
-                      </li>)}
-                  </ul>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
+        
       </div>
     </section>;
 }
