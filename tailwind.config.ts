@@ -119,6 +119,10 @@ export default {
 				'slide-in-right': 'slide-in-right 0.5s ease-out',
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite'
+			},
+			animationDelay: {
+				'1000': '1000ms',
+				'2000': '2000ms'
 			}
 		}
 	},

@@ -1,142 +1,102 @@
-import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, Calculator, Users, TrendingUp } from 'lucide-react';
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Calculator, TrendingUp, Shield } from "lucide-react";
+
 const HeroSection = () => {
-  return <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-blue-700 text-sm font-medium">
-              <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-              Certified QuickBooks ProAdvisor
+  return (
+    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 pt-12 pb-20">
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse delay-1000"></div>
+        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse delay-2000"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <div className="mb-6">
+              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-100 text-sm font-medium text-blue-700 mb-6">
+                <Shield className="w-4 h-4" />
+                Certified QuickBooks ProAdvisor
+              </div>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Expert Help Without the{' '}
-              <span className="gradient-text">Overhead</span>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Clean Books.{" "}
+              <span className="gradient-text">Clear Vision.</span>{" "}
+              <span className="text-blue-600">Confident Decisions.</span>
             </h1>
-            
-            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              April Does Data is a Certified QuickBooks ProAdvisor who works with clients remotely across the country. 
-              Whether your books are a mess, your payroll is behind, or you're prepping for a surprise audit, we step in and clean it up.{' '}
-              <span className="font-semibold text-gray-900">Fast. Accurate. Done Right. Even when no one's looking.</span>
+
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+              Remote bookkeeping tailored for tradespeople, landlords, and small business owners 
+              who need more than just spreadsheets.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-brandBlue to-brandPurple hover:from-brandPurple hover:to-brandPink transition-all duration-300 text-lg px-8 py-4">
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-red-400 to-pink-500 hover:from-red-500 hover:to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transform transition-all duration-200 hover:scale-105 shadow-xl group"
+              >
                 Get My Free Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-brandBlue text-brandBlue hover:bg-brandBlue hover:text-white transition-all duration-300 text-lg px-8 py-4">
+              
+              <Button 
+                variant="outline"
+                size="lg"
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-blue-200 text-blue-700 hover:bg-blue-50 transition-all duration-200"
+              >
                 View Packages
               </Button>
             </div>
-            
-            {/* Service highlights */}
-            <div className="grid grid-cols-3 gap-4 pt-8">
-              <div className="flex items-center space-x-2 text-green-600">
-                <BookOpen className="w-5 h-5" />
-                <span className="text-sm font-medium">Books Reconciled Monthly</span>
+
+            <div className="mt-12 grid grid-cols-2 gap-8 text-center lg:text-left">
+              <div className="flex flex-col items-center lg:items-start">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-3">
+                  <Calculator className="w-6 h-6 text-blue-600" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900">50+</div>
+                <div className="text-sm text-gray-600">Happy Clients</div>
               </div>
-              <div className="flex items-center space-x-2 text-blue-600">
-                <Calculator className="w-5 h-5" />
-                <span className="text-sm font-medium">Tax-Ready Financials</span>
-              </div>
-              <div className="flex items-center space-x-2 text-purple-600">
-                <TrendingUp className="w-5 h-5" />
-                <span className="text-sm font-medium">Strategic Business Insights</span>
+              <div className="flex flex-col items-center lg:items-start">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-3">
+                  <Shield className="w-6 h-6 text-purple-600" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900">24hr</div>
+                <div className="text-sm text-gray-600">Response</div>
               </div>
             </div>
           </div>
-          
-          {/* Right side - Stats cards and image */}
+
           <div className="relative">
-            {/* Main image placeholder */}
-            <div className="relative bg-white rounded-2xl shadow-2xl p-6 mb-6">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Professional bookkeeping workspace" className="w-full h-64 object-cover rounded-lg" />
-              
-              {/* Floating icon */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg animate-bounce-gentle">
-                <Calculator className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            
-            {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
-              animationDelay: '0.3s'
-            }}>
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-5 h-5 text-brandBlue" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-gray-900">QuickBooks ProAdvisor</p>
-                    <p className="text-sm text-gray-600">Certified expert</p>
-                  </div>
+            <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="space-y-4">
+                <div className="h-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full"></div>
+                <div className="space-y-2">
+                  <div className="h-3 bg-gray-200 rounded-full w-3/4"></div>
+                  <div className="h-3 bg-gray-200 rounded-full w-1/2"></div>
+                  <div className="h-3 bg-gray-200 rounded-full w-5/6"></div>
                 </div>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
-              animationDelay: '0.4s'
-            }}>
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-brandPurple" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-gray-900">15+ Years Experience</p>
-                    <p className="text-sm text-gray-600">Proven track record</p>
-                  </div>
+                <div className="flex justify-between items-center pt-4">
+                  <div className="text-sm text-gray-500">Monthly P&L</div>
+                  <div className="text-green-600 font-bold">+15.2%</div>
                 </div>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
-              animationDelay: '0.5s'
-            }}>
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                    <Users className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-gray-900">50+ Happy Clients</p>
-                    <p className="text-sm text-gray-600">Nationwide service</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
-              animationDelay: '0.6s'
-            }}>
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-5 h-5 text-yellow-600" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-gray-900">QuickBooks Training</p>
-                    <p className="text-sm text-gray-600">On Request</p>
-                  </div>
+                <div className="bg-gradient-to-r from-green-400 to-green-500 h-8 rounded-lg flex items-center justify-center text-white font-semibold">
+                  Books Reconciled ✓
                 </div>
               </div>
             </div>
             
-            {/* Badges */}
-            <div className="flex justify-center space-x-6 mt-6">
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <img src="https://via.placeholder.com/40x20/4F46E5/FFFFFF?text=QB" alt="QuickBooks" className="h-5" />
-                
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <img src="https://via.placeholder.com/40x20/059669/FFFFFF?text=IRS" alt="IRS Compliant" className="h-5" />
-                <span>IRS Compliant</span>
-              </div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg animate-bounce">
+              <span className="text-2xl">📊</span>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
