@@ -1,10 +1,10 @@
 
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
+import CTASection from '@/components/CTASection';
 import ServicesSection from '@/components/ServicesSection';
 import PricingSection from '@/components/PricingSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -12,10 +12,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
+      <CTASection />
       <ServicesSection />
       <PricingSection />
       <TestimonialsSection />
-      <CTASection />
       <Footer />
     </div>
   );
