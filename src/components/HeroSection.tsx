@@ -1,10 +1,7 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Calculator, Users, TrendingUp } from 'lucide-react';
-
 const HeroSection = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"></div>
       
@@ -29,18 +26,11 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-brandBlue to-brandPurple hover:from-brandPurple hover:to-brandPink transition-all duration-300 text-lg px-8 py-4"
-              >
+              <Button size="lg" className="bg-gradient-to-r from-brandBlue to-brandPurple hover:from-brandPurple hover:to-brandPink transition-all duration-300 text-lg px-8 py-4">
                 Get My Free Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-brandBlue text-brandBlue hover:bg-brandBlue hover:text-white transition-all duration-300 text-lg px-8 py-4"
-              >
+              <Button variant="outline" size="lg" className="border-2 border-brandBlue text-brandBlue hover:bg-brandBlue hover:text-white transition-all duration-300 text-lg px-8 py-4">
                 View Packages
               </Button>
             </div>
@@ -66,11 +56,7 @@ const HeroSection = () => {
           <div className="relative">
             {/* Main image placeholder */}
             <div className="relative bg-white rounded-2xl shadow-2xl p-6 mb-6">
-              <img 
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
-                alt="Professional bookkeeping workspace"
-                className="w-full h-64 object-cover rounded-lg"
-              />
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Professional bookkeeping workspace" className="w-full h-64 object-cover rounded-lg" />
               
               {/* Floating icon */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg animate-bounce-gentle">
@@ -80,7 +66,9 @@ const HeroSection = () => {
             
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{animationDelay: '0.3s'}}>
+              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
+              animationDelay: '0.3s'
+            }}>
                 <div className="flex items-center space-x-3 mb-2">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-5 h-5 text-brandBlue" />
@@ -92,7 +80,9 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
+              animationDelay: '0.4s'
+            }}>
                 <div className="flex items-center space-x-3 mb-2">
                   <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
                     <TrendingUp className="w-5 h-5 text-brandPurple" />
@@ -104,7 +94,9 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{animationDelay: '0.5s'}}>
+              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
+              animationDelay: '0.5s'
+            }}>
                 <div className="flex items-center space-x-3 mb-2">
                   <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
                     <Users className="w-5 h-5 text-green-600" />
@@ -116,7 +108,9 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{animationDelay: '0.6s'}}>
+              <div className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
+              animationDelay: '0.6s'
+            }}>
                 <div className="flex items-center space-x-3 mb-2">
                   <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-5 h-5 text-yellow-600" />
@@ -133,7 +127,7 @@ const HeroSection = () => {
             <div className="flex justify-center space-x-6 mt-6">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <img src="https://via.placeholder.com/40x20/4F46E5/FFFFFF?text=QB" alt="QuickBooks" className="h-5" />
-                <span>QuickBooks</span>
+                
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <img src="https://via.placeholder.com/40x20/059669/FFFFFF?text=IRS" alt="IRS Compliant" className="h-5" />
@@ -143,8 +137,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
