@@ -1,5 +1,5 @@
 
-import { Check, Zap, Star, Crown } from 'lucide-react';
+import { Check, Zap, Star, Crown, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const PricingSection = () => {
@@ -115,6 +115,23 @@ const PricingSection = () => {
               </Button>
             </div>
           ))}
+        </div>
+
+        {/* Bottom CTA Section */}
+        <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Not Sure What You Need?
+          </h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Get a personalized recommendation based on your business needs and current bookkeeping situation.
+          </p>
+          <Button 
+            size="lg"
+            className="bg-gradient-to-r from-red-400 to-pink-500 hover:from-red-500 hover:to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transform transition-all duration-200 hover:scale-105 shadow-xl group"
+          >
+            Take the Assessment
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+          </Button>
         </div>
       </div>
     </section>
