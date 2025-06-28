@@ -1,8 +1,11 @@
-
 import { Check, Zap, Star, Crown, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const PricingSection = () => {
+interface PricingSectionProps {
+  onGetAssessment: () => void;
+}
+
+const PricingSection = ({ onGetAssessment }: PricingSectionProps) => {
   const plans = [
     {
       name: "Basic",
@@ -126,6 +129,7 @@ const PricingSection = () => {
             Get a personalized recommendation based on your business needs and current bookkeeping situation.
           </p>
           <Button 
+            onClick={onGetAssessment}
             size="lg"
             className="bg-gradient-to-r from-red-400 to-pink-500 hover:from-red-500 hover:to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transform transition-all duration-200 hover:scale-105 shadow-xl group"
           >

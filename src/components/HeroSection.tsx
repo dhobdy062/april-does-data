@@ -3,7 +3,11 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator, TrendingUp, Shield } from "lucide-react";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onGetAssessment: () => void;
+}
+
+const HeroSection = ({ onGetAssessment }: HeroSectionProps) => {
   return (
     <section id="home" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 pt-12 pb-20">
       <div className="absolute inset-0">
@@ -35,6 +39,7 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
+                onClick={onGetAssessment}
                 size="lg"
                 className="bg-gradient-to-r from-red-400 to-pink-500 hover:from-red-500 hover:to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg transform transition-all duration-200 hover:scale-105 shadow-xl group"
               >
@@ -45,7 +50,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-blue-200 text-blue-700 hover:bg-blue-50 transition-all duration-200"
               >
                 View Packages

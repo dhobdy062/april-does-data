@@ -1,9 +1,12 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone } from 'lucide-react';
 
-const Navigation = () => {
+interface NavigationProps {
+  onGetAssessment: () => void;
+}
+
+const Navigation = ({ onGetAssessment }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   
   const navItems = [{
@@ -56,7 +59,10 @@ const Navigation = () => {
                 <Phone className="w-4 h-4 mr-2" />
                 323-749-9444
               </a>
-              <Button className="bg-gradient-to-r from-brandBlue to-brandPurple hover:from-brandPurple hover:to-brandPink transition-all duration-300">
+              <Button 
+                onClick={onGetAssessment}
+                className="bg-gradient-to-r from-brandBlue to-brandPurple hover:from-brandPurple hover:to-brandPink transition-all duration-300"
+              >
                 Free Assessment
               </Button>
             </div>
@@ -95,7 +101,13 @@ const Navigation = () => {
                   <Phone className="w-4 h-4 mr-2" />
                   323-749-9444
                 </a>
-                <Button className="w-full bg-gradient-to-r from-brandBlue to-brandPurple">
+                <Button 
+                  onClick={() => {
+                    onGetAssessment();
+                    setIsOpen(false);
+                  }}
+                  className="w-full bg-gradient-to-r from-brandBlue to-brandPurple"
+                >
                   Free Assessment
                 </Button>
               </div>

@@ -1,8 +1,11 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle, Clock, Shield } from 'lucide-react';
 
-const CTASection = () => {
+interface CTASectionProps {
+  onGetAssessment: () => void;
+}
+
+const CTASection = ({ onGetAssessment }: CTASectionProps) => {
   return (
     <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -36,6 +39,7 @@ const CTASection = () => {
         </div>
         
         <Button 
+          onClick={onGetAssessment}
           size="lg"
           className="bg-white text-brandPurple hover:bg-gray-100 text-lg px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >

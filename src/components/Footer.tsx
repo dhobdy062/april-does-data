@@ -1,7 +1,11 @@
 
 import { Phone, Mail, MapPin } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  onGetAssessment: () => void;
+}
+
+const Footer = ({ onGetAssessment }: FooterProps) => {
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +56,10 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Get Started</h3>
             <div className="bg-gradient-to-r from-brandPurple to-brandPink rounded-xl p-6">
               <p className="text-white mb-4 font-medium">Ready to clean up your books?</p>
-              <button className="w-full bg-white text-brandPurple font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+              <button 
+                onClick={onGetAssessment}
+                className="w-full bg-white text-brandPurple font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
                 Free Assessment
               </button>
             </div>
