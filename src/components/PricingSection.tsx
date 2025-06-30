@@ -32,7 +32,7 @@ const PricingSection = ({ onGetAssessment }: PricingSectionProps) => {
         "Multiple accounts",
         "Credit card reconciliation",
         "Monthly financials", 
-        "Payroll support (5 employees max)",
+        "Payroll support",
         "Quarterly financial review"
       ],
       popular: true,
