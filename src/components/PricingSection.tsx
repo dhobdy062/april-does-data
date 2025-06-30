@@ -1,3 +1,4 @@
+
 import { Check, Zap, Star, Crown, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -28,8 +29,7 @@ const PricingSection = ({ onGetAssessment }: PricingSectionProps) => {
       description: "For growing service providers and contractors", 
       icon: Star,
       features: [
-        "Up to 3 accounts",
-        "150 transactions",
+        "Multiple accounts",
         "Credit card reconciliation",
         "Monthly financials", 
         "Payroll support (5 employees max)",
