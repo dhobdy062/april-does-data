@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator, TrendingUp, Shield } from "lucide-react";
+import intuitLogo from "@/assets/intuit-logo.png";
 interface HeroSectionProps {
   onGetAssessment: () => void;
 }
@@ -19,7 +20,8 @@ const HeroSection = ({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <div className="mb-6">
-              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 rounded-full border border-blue-100 text-sm font-medium text-blue-700 mb-6 py-[16px] my-[5px]">
+               <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 rounded-full border border-blue-100 text-sm font-medium text-blue-700 mb-6 py-[16px] my-[5px]">
+                <img src={intuitLogo} alt="Intuit" className="w-4 h-4" />
                 <Shield className="w-4 h-4" />
                 Certified QuickBooks ProAdvisor
               </div>
